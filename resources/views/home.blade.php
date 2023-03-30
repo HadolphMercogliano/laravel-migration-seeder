@@ -11,11 +11,19 @@
 </head>
 
 <body>
-  <header>
+  <header class="mb-3
+  ">
     @include('partials.navbar')
   </header>
   <main>
+    <div class="container">
 
+      @forelse ($trains as $train)
+        ciao
+      @empty
+        nessun treno trovato
+      @endforelse
+    </div>
   </main>
 </body>
 </html>
