@@ -24,7 +24,7 @@ return new class extends Migration
             $table->tinyInteger('n_carrozze');
             $table->boolean('in_orario');
             $table->boolean('cancellato');
-            $table->timestamps();
+            $table->timestamps();          
         });
     }
 

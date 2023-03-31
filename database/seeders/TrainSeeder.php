@@ -15,12 +15,14 @@ class TrainSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
+      for ($i=0; $i <30 ; $i++) { 
+       
       $new_train = new Train;
       
       $new_train->azienda = $faker->randomElement(['italo', 'trenitalia']);
       $new_train->stazione_partenza = $faker->city();
       $new_train->stazione_arrivo = $faker->city();
-      $new_train->data_partenza = $faker->dateTimeBetween('-0 week', '+1 week');
+      $new_train->data_partenza = $faker->dateTimeBetween('-1day', '+1 week');
       $new_train->orario_partenza = $faker->time();
       $new_train->orario_arrivo = $faker->time();
       $new_train->codice_treno = $faker->numberBetween(9900, 9999);
@@ -29,4 +31,5 @@ class TrainSeeder extends Seeder
       $new_train->cancellato = $faker->boolean();
       $new_train->save(); 
     }
+  }
 }
