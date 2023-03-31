@@ -7,16 +7,17 @@
 
     @vite('resources/js/app.js')
 
-  <title>{{env('APP_NAME')}}</title>
+  <title>{{env('APP_NAME')}} - Treni odierni </title>
 </head>
 
 <body>
-  <header class="mb-3">
+  <header class="mb-3
+  ">
     @include('partials.navbar')
   </header>
   <main>
     <div class="container">
-      <h1>Tutti i treni</h1>
+      <h1>Treni in partenza oggi</h1>
       <table class="table table-dark table-striped">
         <thead>
           <tr>
